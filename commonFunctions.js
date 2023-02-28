@@ -1,4 +1,4 @@
-export async function parseGetParams() {
+export function parseGetParams() {
     var query = location.search.substr(1);
     if (query === "") {
         return "";
@@ -14,7 +14,7 @@ export async function parseGetParams() {
             if (!result[key]) result[key] = [value]
             else result[key].push(value)
         }
-        return await result;
+        return result;
     }
 }
 export function concat(line="", arr = [""]) {
